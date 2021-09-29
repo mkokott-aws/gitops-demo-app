@@ -9,9 +9,11 @@ spec:
       command: [ "sh", "-c"]
       args:
       - while true; do
-          echo -en '\n';
-          printenv MY_NODE_NAME MY_POD_NAME MY_POD_NAMESPACE;
-          printenv MY_POD_IP MY_POD_SERVICE_ACCOUNT;
+          echo "node            - $(printenv MY_NODE_NAME)"
+          echo "pod             - $(printenv MY_POD_NAME)"
+          echo "ip              - $(printenv MY_POD_IP)"
+          echo "namespace       - $(printenv MY_POD_NAMESPACE)"
+          echo "service account - $(printenv MY_POD_SERVICE_ACCOUNT)"
           sleep 10;
         done;
       env:
