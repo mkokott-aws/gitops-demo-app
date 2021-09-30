@@ -6,6 +6,3 @@ while true; do
   echo "service account - $(printenv MY_POD_SERVICE_ACCOUNT)"
   sleep 10;
 done;
-
-
-CMD [ "/bin/bash", "-c", "/create-tenant.sh" ]
